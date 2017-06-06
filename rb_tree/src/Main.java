@@ -17,8 +17,8 @@ public class Main {
             n = Integer.parseInt(line);
             if (n > 0) rb.insert(n);
             else if (n < 0){
-                if(rb.search(rb.root,n)==null) System.out.println("Cannot delete: does not exist");
                 n = Math.abs(n);
+                if(rb.search(rb.root,n)==null) System.out.println("Cannot delete "+n+": does not exist");
                 rb.delete(n);
             } else if (n == 0) break;
         }
